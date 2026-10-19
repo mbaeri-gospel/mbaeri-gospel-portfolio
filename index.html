@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Portfolio of MBAERI GOSPEL CHINOMSO — Computer Science graduate, front-end developer, and Business Management student bridging technology and business strategy.">
+<link rel="icon" type="image/jpg" href="favicon.jpg">
+
+  <title>Mbaeri Gospel Chinomso | Front-End Developer & Business Management</title>
+  <style>
+    :root{--bg:#111827;--panel:#101a2b;--panel2:#142137;--text:#f4f7fb;--muted:#aab7cb;--line:rgba(255,255,255,.12);--accent:#79f2cf;--accent2:#79a9ff;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}
+
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    
+    a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+
+    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+
+    .nav{position:sticky;top:0;z-index:10;background:rgba(8,14,26,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+
+    .nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+
+    .brand{font-weight:850;letter-spacing:.04em;font-size:.96rem}
+
+    .brand span{color:var(--accent)}
+
+    .nav-links{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.9rem}
+    
+    .nav-links a:hover{color:var(--accent)}
+
+    .menu-btn{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:8px 12px;border-radius:10px}
+
+    .hero{position:relative;overflow:hidden;isolation:isolate;padding:84px 0 90px;background:radial-gradient(ellipse at 78% 30%,rgba(121,169,255,.2),transparent 38%),radial-gradient(ellipse at 15% 85%,rgba(121,242,207,.12),transparent 36%),linear-gradient(135deg,#0b1424,#101b30 55%,#0a1120)}
+
+    .hero:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,transparent,#000)}
+
+    .hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:58px;align-items:center}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(121,242,207,.3);background:rgba(121,242,207,.07);padding:7px 12px;border-radius:999px;color:var(--accent);font-size:.8rem;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
+
+    h1{font-size:clamp(2.65rem,5.7vw,5rem);line-height:1.04;letter-spacing:-.055em;margin:22px 0 18px;max-width:780px}
+
+    h1 span{background:linear-gradient(90deg,var(--accent),#a7c4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    .headline{font-size:clamp(1rem,1.5vw,1.2rem);font-weight:650;color:#e2e9f5;max-width:720px}
+
+    .hero-copy{color:var(--muted);max-width:650px;margin:18px 0 28px}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:12px 18px;border-radius:12px;font-weight:750;border:1px solid var(--line);transition:transform .2s,background .2s}
+
+    .btn:hover{transform:translateY(-2px)}
+    
+    .btn-primary{background:var(--accent);color:#07121a;border-color:var(--accent)}
+    
+    .btn-ghost{background:rgba(255,255,255,.04)}
+
+    .portrait-shell{position:relative;max-width:420px;margin-inline:auto;width:100%;padding:10px;border-radius:28px;background:linear-gradient(145deg,rgba(121,242,207,.8),rgba(121,169,255,.12) 45%,rgba(255,255,255,.12));box-shadow:0 30px 90px rgba(0,0,0,.35)}
+
+    .portrait-shell:before{content:"";position:absolute;inset:-28px;z-index:-1;border:1px solid rgba(121,169,255,.2);border-radius:36px;transform:rotate(7deg)}
+
+    .portrait{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:20px;background:#1d293c}
+
+    .portrait-caption{position:absolute;bottom:25px;left:25px;right:25px;padding:15px 17px;border:1px solid rgba(255,255,255,.18);background:rgba(8,14,26,.78);backdrop-filter:blur(12px);border-radius:15px}
+
+    .portrait-caption strong{display:block}.portrait-caption small{color:var(--muted)}
+
+    .float-tag{position:absolute;top:32px;right:-20px;padding:10px 13px;background:#f4f7fb;color:#0b1220;border-radius:12px;font-size:.8rem;font-weight:800;box-shadow:0 12px 32px #0005}
+
+    section{padding:84px 0}.section-head{max-width:760px;margin-bottom:34px}
+    
+    .kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem}
+
+    h2{font-size:clamp(2rem,3.7vw,3.1rem);line-height:1.12;letter-spacing:-.04em;margin:10px 0 14px}
+
+    .lead{color:var(--muted);font-size:1.05rem}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+    .card{background:linear-gradient(145deg,rgba(20,33,55,.92),rgba(13,23,39,.94));border:1px solid var(--line);border-radius:20px;padding:25px}
+
+    .card h3{margin:0 0 9px;font-size:1.18rem}.card p{margin:0;color:var(--muted)}
+
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+
+    .stat{padding:16px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
+    
+    .stat strong{display:block;color:var(--accent);font-size:1.1rem}
+    
+    .stat span{font-size:.82rem;color:var(--muted)}
+    
+    .tag-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+    
+    .tag{font-size:.86rem;color:#dbe5f4;background:rgba(255,255,255,.055);border:1px solid var(--line);padding:7px 11px;border-radius:999px}
+
+    .timeline{display:grid;gap:18px}
+    
+    .timeline-item{position:relative;padding:23px 24px 23px 28px;border-left:2px solid rgba(121,242,207,.55);background:rgba(255,255,255,.025);border-radius:0 16px 16px 0}
+
+    .timeline-item:before{content:"";position:absolute;left:-7px;top:29px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(121,242,207,.12)}
+
+    .timeline-item h3{margin:0;font-size:1.12rem}
+    
+    .meta{color:var(--accent);font-size:.86rem;font-weight:750;margin:4px 0 10px}
+    
+    .timeline-item p,.timeline-item li{color:var(--muted)}
+    
+    .timeline-item ul{padding-left:20px;margin:10px 0 0}
+    
+    .project-card{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start}
+    
+    .status{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;color:var(--accent);border:1px solid rgba(121,242,207,.25);padding:6px 10px;border-radius:999px}
+
+    .status:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+    .project-points{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    
+    .project-points span{font-size:.83rem;color:var(--muted)}
+
+    .cert-list{display:grid;gap:12px}.cert-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}
+
+    .cert-row small{display:block;color:var(--muted);margin-top:3px}
+    
+    .download{color:var(--accent);font-weight:800;white-space:nowrap}
+
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}
+    
+    .contact-links{display:grid;gap:12px;margin-top:18px}
+    
+    .contact-link{display:flex;gap:12px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025);overflow-wrap:anywhere}
+    
+    .contact-link b{display:block;font-size:.9rem}
+    
+    .contact-link span{color:var(--muted);font-size:.86rem}
+
+    .note{font-size:.88rem;color:var(--muted);margin-top:16px}
+    
+    .footer{padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+    
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+    .accent-text{color:var(--accent)}
+    .muted{color:var(--muted)}
+    @media(max-width:850px){.hero-grid,.contact-grid{grid-template-columns:1fr}
+    .hero-grid{gap:48px}.hero-copy,.headline{max-width:unset}.portrait-shell{max-width:360px}.grid-2{grid-template-columns:1fr}.nav-links{gap:13px}.project-card{grid-template-columns:1fr}}
+    @media(max-width:650px){.wrap{width:min(var(--max),calc(100% - 28px))}.nav-inner{min-height:64px}.menu-btn{display:inline-flex}.nav-links{display:none;position:absolute;left:14px;right:14px;top:64px;padding:15px;background:#101a2b;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:stretch}.nav-links.open{display:flex}.nav-links a{padding:8px}.hero{padding:60px 0 68px}section{padding:65px 0}.stat-row{grid-template-columns:1fr}.float-tag{right:-8px}.card{padding:21px}.cert-row{align-items:flex-start;flex-direction:column}.download{white-space:normal}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+
+      <a class="brand" href="#home" aria-label="Mbaeri Gospel Chinomso home">MGC<span>.</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Technology × Business Strategy</div>
+          <h1>Building digital experiences with <span>business purpose.</span></h1>
+          <p class="headline">Business Management Student | Computer Science Graduate &amp; Front-End Developer | Building Tech with a Business Mindset.</p>
+          <p class="hero-copy">Bridging Technology &amp; Business Strategy. I combine front-end development with a growing understanding of business operations, customer needs, and strategic outcomes.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost" href="#contact">Contact me</a>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><strong>Front-End</strong><span>Responsive, user-focused interfaces</span></div>
+            <div class="stat"><strong>Business</strong><span>Strategy and operational thinking</span></div>
+            <div class="stat"><strong>Growth</strong><span>Continuous learning and collaboration</span></div>
+          </div>
+        </div>
+        <div class="portrait-shell">
+          <img class="portrait" src="profile.jpg" alt="Portrait of Mbaeri Gospel Chinomso">
+          <div class="float-tag">Developer · Strategist · Learner</div>
+          <div class="portrait-caption"><strong>MBAERI GOSPEL CHINOMSO</strong><small>Lomé, Togo · Open to Remote opportunities</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">About me</div><h2>Code with context. Build with purpose.</h2><p class="lead">I look at software through a business lens.</p></div>
+        <div class="grid-2">
+          <div class="card">
+            <p>Having earned my degree in Computer Science with a focus on Front-End Development, I am currently expanding my capabilities by pursuing a degree in Business Management. My technical background allows me to build clean, responsive, and user-centric digital interfaces. My business education equips me to understand how those interfaces can support customer retention, project alignment, and company growth.</p>
+            <p style="margin-top:14px">I don't just write code—I aim to build digital solutions that make strategic sense. I am developing my portfolio through practical projects, structured learning, and continuous improvement.</p>
+          </div>
+          <div class="card">
+            <h3>What I bring</h3>
+            <p>A combination of technical execution, business awareness, curiosity, and a collaborative mindset. I enjoy translating requirements into usable digital experiences and thinking about how a product creates value for its users and organization.</p>
+            <div class="tag-list"><span class="tag">User-first thinking</span><span class="tag">Strategic mindset</span><span class="tag">Adaptability</span><span class="tag">Team collaboration</span><span class="tag">Continuous learning</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background:rgba(255,255,255,.018)">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Core competencies</div><h2>Skills across technology and business.</h2><p class="lead">A growing toolkit for building, improving, and coordinating digital products.</p></div>
+        <div class="grid-2">
+          <div class="card"><h3>Front-End Development</h3><p>Building accessible, responsive interfaces and reusable UI components.</p><div class="tag-list"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript (ES6+)</span><span class="tag">React.js</span><span class="tag">JSX</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span><span class="tag">CSS Grid &amp; Flexbox</span><span class="tag">Responsive Web Design</span><span class="tag">DOM Manipulation</span><span class="tag">Web Accessibility</span><span class="tag">Basic SEO</span><span class="tag">Cross-Browser Testing</span></div></div>
+          <div class="card"><h3>Business &amp; Project Management</h3><p>Applying structured planning, communication, and improvement methods to project work.</p><div class="tag-list"><span class="tag">Business Strategy</span><span class="tag">Project Management</span><span class="tag">Agile Methodologies</span><span class="tag">Scrum</span><span class="tag">Kanban</span><span class="tag">SDLC</span><span class="tag">Sprint Planning</span><span class="tag">Scope Management</span><span class="tag">Stakeholder Communication</span><span class="tag">Team Leadership</span><span class="tag">Operational Thinking</span></div></div>
+          <div class="card"><h3>Tools &amp; Workflow</h3><p>Tools used for development, design translation, version control, and coordination.</p><div class="tag-list"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">npm</span><span class="tag">Figma</span><span class="tag">Jira</span><span class="tag">Confluence</span><span class="tag">Asana</span><span class="tag">GitHub Projects</span></div></div>
+          <div class="card"><h3>Professional strengths</h3><p>The approach I bring to teams, learning, and problem-solving.</p><div class="tag-list"><span class="tag">Team Alignment &amp; Impact</span><span class="tag">Growth-Minded</span><span class="tag">Adaptability &amp; Resilience</span><span class="tag">Collaborative Mindset</span><span class="tag">Clear Communication</span><span class="tag">Problem-Solving</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Education</div><h2>Building a multidisciplinary foundation.</h2><p class="lead">Formal study in technology, now complemented by business management.</p></div>
+        <div class="timeline">
+          <article class="timeline-item"><h3>Business Management Degree</h3><div class="meta">BYU–Pathway Worldwide · 2026 – Present</div><p>Focusing on operational strategy, project management, and organizational leadership. Applying management methodologies and structured planning to technical development lifecycles.</p></article>
+          <article class="timeline-item"><h3>Degree in Computer Science</h3><div class="meta">Imo State University · 2017 – 2021</div><p>Developed a foundation in computer science with a focus on front-end development, including semantic HTML, responsive CSS layout architecture, and dynamic JavaScript applications.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" style="background:rgba(255,255,255,.018)">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Experience</div><h2>Learning through study and practical development.</h2><p class="lead">Experience includes ongoing education and freelance front-end development.</p></div>
+        <div class="timeline">
+          <article class="timeline-item"><h3>Business Management &amp; Tech Student</h3><div class="meta">BYU–Pathway Worldwide · Remote · 2026 – Present</div><p>Developing business management knowledge while independently building front-end software solutions and strengthening the connection between technical execution and business goals.</p><ul><li>Study operational strategy, project planning, and organizational leadership.</li><li>Apply structured planning and continuous learning to technical projects.</li></ul></article>
+          <article class="timeline-item"><h3>Freelance Front-End Developer</h3><div class="meta">Self-employed · Lomé, Togo · 2023 – Present</div><ul><li>Work with clients to clarify requirements and translate design mockups, including Figma designs, into responsive web pages.</li><li>Refactor code to use modern JavaScript (ES6+) patterns and improve maintainability.</li><li>Build reusable UI components with React.js and Tailwind CSS to support faster prototyping and consistent interfaces.</li></ul></article>
+        </div>
+      
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Featured project</div><h2>Turning business questions into useful interfaces.</h2><p class="lead">A work-in-progress portfolio project designed to demonstrate both technical skills and business thinking.</p></div>
+        <article class="card project-card">
+          <div>
+            <h3>
+              Business Sales &amp; Analytics Dashboard
+            </h3>
+
+            <p>
+              Developing a responsive web application concept for tracking core business KPIs such as revenue, churn, and user acquisition. The goal is to make key performance information easy to scan and useful for decision-making.
+            </p>
+
+            <div class="project-points">
+              <span>▸ KPI-focused interface</span><span>▸ Responsive layout</span><span>▸ Business metrics</span><span>▸ Agile project planning</span>
+            </div>
+
+            <div class="tag-list">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React (planned/if used)</span><span class="tag">Data Visualization (planned/if used)</span></div>
+            </div>
+
+          <div>
+            <span class="status">In progress · October 2026</span><p class="note">Add your GitHub repository and live demo links once they are available.</p><a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub repositories ↗</a>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <section id="certificates" style="background:rgba(255,255,255,.018)">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Certificates &amp; documents</div><h2>Credentials you can review.</h2><p class="lead">Add your PDF certificates to the <code>certificates</code> folder and update the filenames below. These links download the documents directly.</p></div>
+        <div class="card cert-list">
+          <div class="cert-row"><div><strong>Front-End Development Certificate</strong></div><a class="download" href="frontend-development-certificate.pdf" download>Download PDF ↓</a></div>
+
+          <div class="cert-row"><div><strong>Degree BSc Certificate</strong></div><a class="download" href="Degree-BSc-Certificate.pdf" download>Download PDF ↓</a></div>
+
+          <div class="cert-row"><div><strong>Project Management Certificate</strong></div><a class="download" href="Project Management Certifcate.html" download>Download PDF ↓</a></div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Contact</div><h2>Let’s build something that matters.</h2><p class="lead">Open to relevant opportunities, collaborations, internships, and conversations at the intersection of technology and business.</p></div>
+        <div class="contact-grid">
+          <div class="card"><h3>Get in touch</h3><p>For professional enquiries, project discussions, or collaboration opportunities, use the contact details or social links.</p>
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:mbaerigospelchinomso@gmail.com"><span>✉</span><div><b>Email</b><span>chinomsombaeri@gmail.com</span></div></a>
+              <a class="contact-link" href="https://wa.me/22871399880" target="_blank" rel="noopener noreferrer"><span>☏</span><div><b>Phone / WhatsApp</b><span>+228 71 39 98 80</span></div></a>
+              <div class="contact-link"><span>⌖</span><div><b>Location</b><span>Lomé, Togo</span></div></div>
+            </div>
+          </div>
+          <div class="card"><h3>Find me online</h3><p class="muted"> Public profiles: </p>
+            <div class="contact-links">
+              <!--  LinkedIn profile . -->
+              <a class="contact-link" href="https://www.linkedin.com/in/mbaeri-gospel-chinomso/" target="_blank" rel="noopener noreferrer"><span>in</span><div><b>LinkedIn</b><span>Professional profile ↗</span></div></a>
+              <!-- GitHub username. -->
+              <a class="contact-link" href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener noreferrer"><span>⌘</span><div><b>GitHub</b><span>Code and repositories ↗</span></div></a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-inner"><span>© <span id="year"></span> Mbaeri Gospel Chinomso. All rights reserved.</span><span>Built around <span class="accent-text">technology, strategy &amp; growth.</span></span></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
